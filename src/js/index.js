@@ -13,6 +13,10 @@ window.onload = function() {
   let randomNumber = middle[Math.floor(Math.random() * middle.length)];
   let randomSuite = top[Math.floor(Math.random() * top.length)];
   console.log(randomSuite);
+  if (randomSuite === "&#9830" || randomSuite === "&#9829") {
+    document.querySelector("#top").style.color = "red";
+    document.querySelector("#bottom").style.color = "red";
+  }
 
   document.querySelector("#top").innerHTML = randomSuite;
   document.querySelector("#middle").innerHTML = randomNumber;
